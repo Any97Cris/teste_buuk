@@ -72,7 +72,8 @@ export default {
       name: "",
       email: "",
       contact: "",
-      options: ""
+      options: "",
+      msg: ""
     }    
   },
   methods: {
@@ -84,14 +85,18 @@ export default {
         contact: this.contact,
         options: this.options
       }
-      this.msg = "Cadastro realizado com sucesso!"
-      await addDoc(colRef,dataObj)
+      let self = this
+      await addDoc(colRef,dataObj).then((res) => {
+        console.log(res)
+        self.msg = "Cadastro realizado com sucesso!"
+        // alert('Cadastro realizado com sucesso!')
+        var form = document.getElementsByName('form_cadastrar')[0];
+        form.reset()
+      })
 
       
       // if(docRef){
         
-      //   var form = document.getElementsByName('form_cadastrar')[0];
-      //   form.reset()
         
       // }else{
       //   console.log("Error")
