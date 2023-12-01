@@ -5,7 +5,7 @@
       <h4 class="mt-3 mb-3 text-center">Fomulário Cadastro Usuário</h4>     
       <message-component :msg="msg" v-show="msg" />
       <div class="container">
-        <form @submit.prevent = "createForm()" name="form_cadastrar">
+        <form @submit.prevent = "createForm" name="form_cadastrar">
           <!--Nome-->
           <div class="form-group">
             <div class="row">
