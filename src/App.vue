@@ -11,7 +11,7 @@
             <div class="row">
               <div class="col-12">
                 <label for="name">Nome e Sobrenome</label>
-                <input type="text" class="form-control" v-model="name" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome e sobrenome">
+                <input type="text" class="form-control" v-model="name" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome e sobrenome" required>
               </div>
             </div>
           </div>
@@ -20,7 +20,7 @@
             <div class="row">
               <div class="col-12">
                 <label for="email">Email</label>
-              <input type="email" class="form-control" v-model="email" id="email" placeholder="example@email.com">
+              <input type="email" class="form-control" v-model="email" id="email" placeholder="example@email.com" required>
               </div>
             </div>        
           </div>
@@ -29,7 +29,7 @@
             <div class="row">
               <div class="col-12">
                 <label for="contact">Número para contato</label>
-                <input type="texte" class="form-control" v-model="contact" id="contact" placeholder="Digite número para contato">
+                <input type="texte" class="form-control" v-model="contact" id="contact" placeholder="Digite número para contato" required>
               </div>
             </div>        
           </div>
@@ -39,7 +39,7 @@
             <div class="row">
               <div class="col-12">
                 <label for="contact">Como nos conheceu?</label>
-                <select v-model="options" id="options" class="form-select" aria-label="Default select example">
+                <select v-model="options" id="options" class="form-select" aria-label="Default select example" required>
                   <option>Linkedin</option>
                   <option>Facebook</option>
                   <option>Instagram</option>
@@ -93,14 +93,6 @@ export default {
         var form = document.getElementsByName('form_cadastrar')[0];
         form.reset()
       })
-
-      
-      // if(docRef){
-        
-        
-      // }else{
-      //   console.log("Error")
-      // }
       
     }
   },
